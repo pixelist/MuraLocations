@@ -19,8 +19,8 @@
 * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 *
 */
-	include template='plugin/config.cfm';
 </cfscript>
+<cfinclude template='plugin/config.cfm'/>
 <cfsavecontent variable="body">
 	<cfoutput>
 		<div style="width:650px;">

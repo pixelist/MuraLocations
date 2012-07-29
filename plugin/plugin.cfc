@@ -95,4 +95,16 @@ component extends="mura.plugin.plugincfc" accessors=true output=false {
 		};
 	}
 
+	private any function getPackageName() {
+		return listFirst(
+			listGetat(
+				getDirectoryFromPath(getCurrentTemplatePath()),
+				listLen(
+					getDirectoryFromPath(getCurrentTemplatePath()),
+					application.configBean.getFileDelim())-1,
+					application.configBean.getFileDelim()
+				),
+		"_");	
+	}
+
 }
